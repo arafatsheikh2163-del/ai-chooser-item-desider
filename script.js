@@ -1,3 +1,5 @@
+const API_URL = "https://ai-chooser-item-desider.vercel.app/";
+
 const textSpinner = document.getElementById('textSpinner');
 const textResult = document.getElementById('textResult');
 const compareTextBtn = document.getElementById('compareText');
@@ -11,7 +13,7 @@ compareTextBtn.addEventListener('click', async () => {
   textResult.innerHTML = "";
 
   try {
-    const res = await fetch('http://localhost:5000/api/compare/text',{
+    const res = await fetch(`${API_URL}/compare/text`,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({text1:t1,text2:t2})
@@ -44,7 +46,7 @@ compareImageBtn.addEventListener('click', async () => {
   formData.append("images", i2);
 
   try {
-    const res = await fetch('http://localhost:5000/api/compare/image',{
+    const res = await fetch(`${API_URL}/compare/image`,{
       method:'POST',
       body: formData
     });
