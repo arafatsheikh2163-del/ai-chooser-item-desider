@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chooser - Groq API</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>AI Chooser App</h1>
+
+  <div class="card">
+    <h2>Text Comparison</h2>
+    <textarea id="text1" placeholder="Enter Text 1"></textarea>
+    <textarea id="text2" placeholder="Enter Text 2"></textarea>
+    <button id="compareText" class="btn">Compare Text</button>
+    <div id="textResult" class="result"></div>
+    <div class="spinner" id="textSpinner"></div>
+  </div>
+
+  <div class="card">
+    <h2>Image Comparison</h2>
+    <input type="file" id="image1" accept="image/*">
+    <input type="file" id="image2" accept="image/*">
+    <button id="compareImage" class="btn">Compare Images</button>
+    <div id="imageResult" class="result"></div>
+    <div class="spinner" id="imageSpinner"></div>
+  </div>
+
+  <div class="status">Status: Ready</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
